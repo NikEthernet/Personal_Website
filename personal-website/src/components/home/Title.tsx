@@ -1,4 +1,4 @@
-import BGMain from './BackgroundMain';
+import BGMain from './Background';
 
 export default function MainTitle(){
 
