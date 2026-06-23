@@ -1,0 +1,19 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 32px; 
+    height: 48px;
+    margin: none;
+
+    background-color: rgb(69, 69, 69);
+    color: lightblue;
+
+    list-style: none;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: rgb(255, 255, 255)
+}
