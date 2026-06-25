@@ -1,11 +1,10 @@
-import BGMain from './Background';
 
 export default function MainTitle(){
 
 
     return(
         <>
-            <BGMain/>
+            <h1>Nikolas Espinoza</h1>
         </>
     )
 }
