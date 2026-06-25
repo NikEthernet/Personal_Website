@@ -10,7 +10,7 @@ export default function Main(){
             <div className='home-content'>
                 <Title/>
             </div>
-            <div className=''>
+            <div className='about-content'>
 
             </div>
         </div>

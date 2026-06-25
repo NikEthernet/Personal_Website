@@ -6,6 +6,8 @@
   box-sizing: border-box;
 }
 
+/*INTERACTIVE BACKGROUND*/
+
 .BG{
     width: auto;
     height: auto;
@@ -15,18 +17,83 @@
     color: black;
 }
 
+/*HOME PAGE CONTENT*/
+
 .home-content{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-areas:
+    ". button" 
+    "name button"          
+    "roles button"           
+    "desc button"
+    ". button";
+    grid-template-columns: 30vw 1fr;
+    grid-template-rows: auto max-content max-content max-content 40%;
     height: 90vh;
     width: auto;
-    padding-top: 20vh;
+    padding-top: 15vh;
     padding-left: 10vw; 
     padding-right: 10vw; 
     padding-bottom: 20vh;
     background-color: rgba(0, 0, 0, 0.336);
 }
+
+.home-content .title-text{
+    color: white;
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.home-content .title-img{
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 1fr;
+    width: 1fr;
+    padding-bottom: 10vh;
+    padding-left: 10vw;
+}
+
+.home-content .title-img img{
+    width: clamp(16rem, 20vw, 20vw);
+    height: clamp(16rem, 20vw, 20vw);
+}
+
+.home-content #title-name{
+    grid-area: name;
+    display: flex; 
+    color: white; 
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(3.25rem, 2.5vw, 5rem);
+}
+
+.home-content #title-role{
+    grid-area: roles;
+    display: flex;
+    color: white;
+
+    padding-bottom: .5rem;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(2.25rem, 2vw, 4rem);
+}
+
+.home-content #title-desc{
+    grid-area: desc;
+    display: flex;
+    color: white;
+
+    padding-top: .5rem;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1rem, 1vw, 1.25rem);
+}
+
+/*NAVBAR ITEMS*/
 
 .navbar{
     position: sticky;  
@@ -36,13 +103,13 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 10vh;
+    height: clamp(4rem, 10vh, 10vh);
     width: auto;
     gap: 3vw; 
     margin: 0px;
     padding: 1vw; 
     padding-top: 1.5vw;
-    padding-left: 4vw;
+    padding-left: 5vw;
 
     background-color: hsla(224, 57%, 9%, 0);
     color: lightblue;
@@ -60,7 +127,7 @@
 }
 
 .drag-anywhere h3{
-    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-size: clamp(1.5rem, 2vw, 1.75rem);
     user-select: none;
     color: rgb(201, 216, 233);
     font-family: 'Space Mono', sans-serif;
