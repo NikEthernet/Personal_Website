@@ -6,6 +6,46 @@
   box-sizing: border-box;
 }
 
+:root {
+  --navbar-height: clamp(4rem, 10vh, 10vh);
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;  
+}
+
+.scroll-container {
+  margin-top: var(--navbar-height);
+  height: calc(100vh - var(--navbar-height));
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(12, 19, 61) transparent;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;     /* removes the track background */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: rgb(19, 29, 56);
+  border-radius: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-button {
+  display: none;               /* removes the arrow buttons */
+}
+
 /*INTERACTIVE BACKGROUND*/
 
 .BG{
@@ -110,15 +150,16 @@
 /* #region NAVBAR ITEMS*/
 
 .navbar{
-    position: sticky;  
-    top: 0;                  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: clamp(4rem, 10vh, 10vh);
-    width: auto;
+    height: var(--navbar-height);
     gap: 3vw; 
     margin: 0px;
     padding: 1vw; 
@@ -144,6 +185,7 @@
     user-select: none;
     color: rgb(201, 216, 233);
     font-family: 'Space Mono', sans-serif;
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
 }
 
 .navbar a{
