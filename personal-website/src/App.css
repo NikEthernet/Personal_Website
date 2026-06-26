@@ -17,7 +17,7 @@
     color: black;
 }
 
-/*HOME PAGE CONTENT*/
+/* #region HOME PAGE CONTENT*/
 
 .home-content{
     display: grid;
@@ -35,7 +35,6 @@
     padding-left: 10vw; 
     padding-right: 10vw; 
     padding-bottom: 20vh;
-    background-color: rgba(0, 0, 0, 0.336);
 }
 
 .home-content .title-text{
@@ -93,7 +92,22 @@
     font-size: clamp(1rem, 1vw, 1.25rem);
 }
 
-/*NAVBAR ITEMS*/
+/* #endregion */
+
+/*ABOUT CONTENT*/
+.about-content{
+    display: grid; 
+    grid-template-areas: 
+    "title ";
+    height: 100vh; 
+    width: auto;
+    padding-top: 15vh;
+    padding-left: 10vw; 
+    padding-right: 10vw; 
+    padding-bottom: 20vh;
+}
+
+/* #region NAVBAR ITEMS*/
 
 .navbar{
     position: sticky;  
@@ -111,7 +125,7 @@
     padding-top: 1.5vw;
     padding-left: 5vw;
 
-    background-color: hsla(224, 57%, 9%, 0);
+    background-color: hsl(224, 57%, 9%);
     color: lightblue;
     font-size: clamp(1.2rem, 1.5vw, 1.5rem);
 
@@ -127,7 +141,6 @@
 }
 
 .drag-anywhere h3{
-    font-size: clamp(1.5rem, 2vw, 1.75rem);
     user-select: none;
     color: rgb(201, 216, 233);
     font-family: 'Space Mono', sans-serif;
@@ -140,3 +153,5 @@
     color: rgb(255, 255, 255);
     font-family: 'Courier New', Courier, monospace;
 }
+
+/* #endregion */
